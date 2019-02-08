@@ -19,7 +19,6 @@ day::~day()
 std::vector<std::string> day::parseInputLines(std::string filepath)
 {
   std::ifstream infile = std::ifstream(filepath);
-
   if (!infile)
   {
     std::cout << "Error: Missing day input file" << std::endl;
@@ -30,8 +29,10 @@ std::vector<std::string> day::parseInputLines(std::string filepath)
   while (!infile.eof())
   {
     std::getline(infile, fileline, '\n');
-    if (fileline == "\n" || fileline == "\r\n")
-    outvec.push_back(fileline);
+    if (fileline != "\n" || fileline != "\r\n")
+    {
+      outvec.push_back(fileline);
+    }
   }
   return outvec;
 }
