@@ -8,4 +8,6 @@ public:
   ~day2();
   std::string solve1();
   std::string solve2();
+  bool hasN(std::string word, int num);
 };
+

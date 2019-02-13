@@ -21,6 +21,8 @@ puzzlemanager::~puzzlemanager()
 
 void puzzlemanager::printSolutions()
 {
+  std::cout << "Solutions to Advent of Code 2018 Puzzles" << std::endl;
+
   int puzzleCount = 1;
 
   for (std::map<int, std::string>::iterator it = solutions.begin(); it != solutions.end(); it++)
