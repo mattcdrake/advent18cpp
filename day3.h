@@ -6,6 +6,5 @@ class day3 :
 {
 public:
   day3();
-  ~day3();
 };
 

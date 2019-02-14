@@ -8,10 +8,6 @@ day::day()
 {
 }
 
-day::~day()
-{
-}
-
 /*
   Takes a filepath and returns a vector containing each non-blank
   line in the file. Prints an error to console if the file is not found.

@@ -5,10 +5,6 @@ day3::day3()
 {
 }
 
-day3::~day3()
-{
-}
-
 std::string solve1()
 {
   return "";

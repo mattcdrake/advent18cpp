@@ -12,10 +12,6 @@ day1::day1()
   this->inputlines = parseInputLines("input_data\\day1.txt");
 }
 
-day1::~day1()
-{
-}
-
 std::string day1::solve1()
 {
   int runningTotal = 0;

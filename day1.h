@@ -7,7 +7,6 @@ class day1 :
 {
 public:
   day1();
-  ~day1();
   std::string solve1();
   std::string solve2();
 };

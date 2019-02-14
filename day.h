@@ -10,7 +10,6 @@ protected:
 
 public:
   day();
-  ~day();
   std::vector<std::string> parseInputLines(std::string filepath);
   virtual std::string solve1() = 0;
   virtual std::string solve2() = 0;
