@@ -14,3 +14,4 @@ public:
   virtual std::string solve1() = 0;
   virtual std::string solve2() = 0;
 };
+

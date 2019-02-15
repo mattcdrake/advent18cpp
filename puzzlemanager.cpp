@@ -13,10 +13,10 @@ puzzlemanager::puzzlemanager()
   day2 day_2 = day2();
   solutions.insert(std::pair<int, std::string>(3, day_2.solve1()));
   solutions.insert(std::pair<int, std::string>(4, day_2.solve2()));
-}
 
-puzzlemanager::~puzzlemanager()
-{
+  day3 day_3 = day3();
+  solutions.insert(std::pair<int, std::string>(3, day_3.solve1()));
+  solutions.insert(std::pair<int, std::string>(4, day_3.solve2()));
 }
 
 void puzzlemanager::printSolutions()

@@ -9,6 +9,5 @@ private:
 
 public:
   puzzlemanager();
-  ~puzzlemanager();
   void printSolutions();
 };
