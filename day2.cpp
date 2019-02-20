@@ -13,7 +13,7 @@ std::string day2::solve1()
   int twos = 0;
   int threes = 0;
 
-  for (std::vector<std::string>::iterator it = this->inputlines.begin(); 
+  for (std::vector<std::string>::iterator it = this->inputlines.begin();
        it != this->inputlines.end(); it++)
   {
     std::string line = *it;
