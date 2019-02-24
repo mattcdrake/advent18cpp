@@ -5,9 +5,9 @@
 class puzzlemanager
 {
 private:
-  std::map<int, std::string> solutions;
+	std::map<int, std::string> solutions;
 
 public:
-  puzzlemanager();
-  void printSolutions();
+	puzzlemanager();
+	void printSolutions();
 };

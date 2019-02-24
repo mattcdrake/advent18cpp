@@ -14,21 +14,21 @@ day::day()
 */
 std::vector<std::string> day::parseInputLines(std::string filepath)
 {
-  std::ifstream infile = std::ifstream(filepath);
-  if (!infile)
-  {
-    std::cout << "Error: Missing day input file" << std::endl;
-  }
-  std::vector<std::string> outvec;
-  std::string fileline;
+	std::ifstream infile = std::ifstream(filepath);
+	if (!infile)
+	{
+		std::cout << "Error: Missing day input file" << std::endl;
+	}
+	std::vector<std::string> outvec;
+	std::string fileline;
 
-  while (!infile.eof())
-  {
-    std::getline(infile, fileline, '\n');
-    if (fileline != "\n" || fileline != "\r\n")
-    {
-      outvec.push_back(fileline);
-    }
-  }
-  return outvec;
+	while (!infile.eof())
+	{
+		std::getline(infile, fileline, '\n');
+		if (fileline != "\n" || fileline != "\r\n")
+		{
+			outvec.push_back(fileline);
+		}
+	}
+	return outvec;
 }

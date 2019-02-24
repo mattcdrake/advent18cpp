@@ -2,6 +2,8 @@
 *.rc
 *.vcxproj
 *.filters
+*.sln
 *.user
 Debug/*
 Release/*
+.vs/*
