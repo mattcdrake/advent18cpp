@@ -1,8 +1,7 @@
-#include "pch.h"
 #include "puzzlemanager.h"
 
 int main()
 {
-	puzzlemanager puzzleManager = puzzlemanager();
-	puzzleManager.printSolutions();
+	auto puzzle_manager = puzzlemanager();
+	puzzle_manager.printSolutions();
 }

@@ -1,11 +1,10 @@
-#include "pch.h"
 #include "day2.h"
 #include <vector>
 #include <unordered_map>
 
 day2::day2()
 {
-	this->inputlines = parseInputLines("input_data\\day2.txt");
+	this->input_lines_ = parse_input_lines("input_data\\day2.txt");
 }
 
 std::string day2::solve1()
@@ -13,8 +12,8 @@ std::string day2::solve1()
 	int twos = 0;
 	int threes = 0;
 
-	for (std::vector<std::string>::iterator it = this->inputlines.begin();
-		it != this->inputlines.end(); it++)
+	for (std::vector<std::string>::iterator it = this->input_lines_.begin();
+		it != this->input_lines_.end(); it++)
 	{
 		std::string line = *it;
 		if (hasN(line, 2))
@@ -31,12 +30,12 @@ std::string day2::solve1()
 
 std::string day2::solve2()
 {
-	for (std::vector<std::string>::iterator it = this->inputlines.begin();
-		it != this->inputlines.end(); it++)
+	for (std::vector<std::string>::iterator it = this->input_lines_.begin();
+		it != this->input_lines_.end(); it++)
 	{
 		std::string outerStr = *it;
 		for (std::vector<std::string>::iterator it2 = it;
-			it2 != this->inputlines.end(); it2++)
+			it2 != this->input_lines_.end(); it2++)
 		{
 			std::string innerStr = *it2;
 			if (string_distance(outerStr, innerStr))
@@ -53,7 +52,7 @@ bool day2::hasN(std::string word, int n)
 {
 	std::unordered_map<char, int> letters;
 
-	for (size_t i = 0; i < word.length(); i++)
+	for (auto i = 0u; i < word.length(); i++)
 	{
 		if (letters.find(word[i]) != letters.end())
 		{
@@ -86,7 +85,7 @@ bool day2::string_distance(std::string string1, std::string string2)
 
 	int distance = 0;
 
-	for (size_t i = 0; i < string1.length(); i++)
+	for (auto i = 0u; i < string1.length(); i++)
 	{
 		if (string1[i] != string2[i])
 		{
@@ -111,7 +110,7 @@ std::string day2::strip_different(std::string string1, std::string string2)
 		return outStr;
 	}
 
-	for (size_t i = 0; i < string1.length(); i++)
+	for (auto i = 0u; i < string1.length(); i++)
 	{
 		if (string1[i] == string2[i])
 		{

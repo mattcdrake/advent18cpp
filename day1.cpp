@@ -1,21 +1,17 @@
-#include "pch.h"
 #include "day1.h"
-#include <algorithm>
-#include <iostream>
-#include <fstream>
 #include <unordered_set>
 #include <string>
 #include <vector>
 
 day1::day1()
 {
-	this->inputlines = parseInputLines("input_data\\day1.txt");
+	this->input_lines_ = parse_input_lines("input_data\\day1.txt");
 }
 
 std::string day1::solve1()
 {
-	int runningTotal = 0;
-	for (std::vector<std::string>::iterator it = this->inputlines.begin(); it != this->inputlines.end(); it++)
+	auto runningTotal = 0;
+	for (auto it = this->input_lines_.begin(); it != this->input_lines_.end(); it++)
 	{
 		std::string line = *it;
 		if (line.length() > 1)
@@ -44,7 +40,7 @@ std::string day1::solve2()
 	// Convert string vector to an int vector
 	std::list<int> inputvals;
 
-	for (std::vector<std::string>::iterator sit = this->inputlines.begin(); sit != this->inputlines.end(); sit++)
+	for (std::vector<std::string>::iterator sit = this->input_lines_.begin(); sit != this->input_lines_.end(); sit++)
 	{
 		std::string line = *sit;
 

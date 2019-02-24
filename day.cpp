@@ -1,34 +1,31 @@
-#include "pch.h"
 #include "day.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 
-day::day()
-{
-}
+day::day() = default;
 
 /*
   Takes a filepath and returns a vector containing each non-blank
   line in the file. Prints an error to console if the file is not found.
 */
-std::vector<std::string> day::parseInputLines(std::string filepath)
+std::vector<std::string> day::parse_input_lines(const std::string &filepath) const
 {
-	std::ifstream infile = std::ifstream(filepath);
+	auto infile = std::ifstream(filepath);
 	if (!infile)
 	{
 		std::cout << "Error: Missing day input file" << std::endl;
 	}
-	std::vector<std::string> outvec;
-	std::string fileline;
+	std::vector<std::string> out_vector;
+	std::string file_line;
 
 	while (!infile.eof())
 	{
-		std::getline(infile, fileline, '\n');
-		if (fileline != "\n" || fileline != "\r\n")
+		std::getline(infile, file_line, '\n');
+		if (file_line != "\n" || file_line != "\r\n")
 		{
-			outvec.push_back(fileline);
+			out_vector.push_back(file_line);
 		}
 	}
-	return outvec;
+	return out_vector;
 }

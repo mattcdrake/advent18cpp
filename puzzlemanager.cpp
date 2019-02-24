@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "dayWrapper.h"
 #include "puzzlemanager.h"
 #include <iostream>
@@ -25,6 +24,7 @@ puzzlemanager::puzzlemanager()
 void puzzlemanager::printSolutions()
 {
 	std::cout << "Solutions to Advent of Code 2018 Puzzles" << std::endl;
+	std::cout << "----------------------------------------" << std::endl;
 
 	int puzzleCount = 1;
 
